@@ -48,6 +48,7 @@ public class AppConf2 {
 	@Bean
 	public MemberInfoPrinter infoPrinter() {
 		MemberInfoPrinter infoPrinter = new MemberInfoPrinter();
+		// @Autowired Annotation이 지정 되어있으면 setter 메서드를 통해 의존 주입을 하지 않아도 된다.
 		infoPrinter.setMemberDao(memberDao);
 		infoPrinter.setPrinter(memberPrinter);
 		return infoPrinter;
